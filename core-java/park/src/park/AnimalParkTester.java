@@ -8,14 +8,14 @@ public class AnimalParkTester {
 
 	public static void main(String[] args) {
 		
-		//same pakage variable using private
+		//same package variable using private
 		AnimalPark animalpark=new AnimalPark();
 		animalpark.setName("siddhrt");
 		animalpark.setTypeOfAnimal("aggresive");
 		System.out.println("Name of AnimalPark:"+animalpark.getName());
 		System.out.println("Type of animal in park:"+animalpark.getTypeOfAnimal());
 		
-		//same pakage constructor using public
+		//same package constructor using public
 		Quantity animalPark2=new Quantity(12,10);
 		System.out.println("In Park no of Zoo:"+animalPark2.noOfZoo);
 		System.out.println("In Park no. of Animal:"+animalPark2.noOfAnimal);

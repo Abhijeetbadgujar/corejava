@@ -6,12 +6,12 @@ public class EmailOperatorStater {
 
 		EmailOperator emailOperator=new EmailOperator();
 		
-		emailOperator.save("aos.com");
-		//emailOperator.save("aos@.com");
-		//emailOperator.save("aos@.com");
-		//emailOperator.save("aos@.com");
-		//emailOperator.save("aos@.com");
-		//emailOperator.save("aos@.com");
+		emailOperator.save("aos@.com");
+		emailOperator.save("aos@.com");
+		emailOperator.save("aos@.com");
+		emailOperator.save("aos@.com");
+		emailOperator.save("aos@.com");
+		emailOperator.save("aos@.com");
 	}
 
 }

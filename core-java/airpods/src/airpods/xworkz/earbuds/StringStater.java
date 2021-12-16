@@ -3,7 +3,7 @@ package airpods.xworkz.earbuds;
 public class StringStater {
 
 	public static void main(String[] args) {
-		String name="1plus";
+		String name="boat";
 		String name1=new String("boat");//
 		if(name==name1)//different name and different instance
 			{
@@ -30,8 +30,9 @@ public class StringStater {
 		//name2=name1;
 		//System.out.println(name2);
 		
-		if(name2==name1) {
+		if(name2==name2) {
 			System.out.println("name1 and name2 are pointing same memory");
+			System.out.println(name2);
 		}
 		else {
 			System.out.println("name1 and name2 are pointing different memory");

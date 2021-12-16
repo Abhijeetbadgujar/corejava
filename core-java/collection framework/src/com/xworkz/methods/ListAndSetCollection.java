@@ -41,6 +41,7 @@ public class ListAndSetCollection {
 			System.out.println(iterator.next());
 		}
 		System.err.println("**************************");
+		
 		System.out.println("set collection");
 		Set<Long> set = new TreeSet<Long>();
 		set.add(7276759230l);
@@ -60,7 +61,7 @@ public class ListAndSetCollection {
 			System.out.println(iterator2.next());
 		}
 		System.out.println("--------------------------");
-		System.out.println("descending order.../n");
+		System.out.println("descending order..."+"/n");
 		Collections.sort(list, Collections.reverseOrder());
 		Iterator<Long> iterator3 = set.iterator();
 		while (iterator3.hasNext()) {
