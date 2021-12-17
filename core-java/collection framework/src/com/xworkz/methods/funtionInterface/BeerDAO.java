@@ -3,9 +3,10 @@ package com.xworkz.methods.funtionInterface;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-public class BeerDAO {
+public class BeerDAO implements BeerSearch{
+	//@FunctionalInterface
 	private Collection<String> beercollection = new ArrayList<String>();
-
+	
 	public BeerDAO() {
 
 		beercollection.add("Beer1");
@@ -20,16 +21,22 @@ public class BeerDAO {
 		beercollection.add("Beer10");
 	}
 
-	public <BeerSearch> boolean find(BeerSearch search, String value) {
+	public boolean find(BeerSearch search, String value) {
 		Iterator<String> itr = this.beercollection.iterator();
 		while (itr.hasNext()) {
 			String element = (String) itr.next();
-			if (search.expressions(search, value)) {
+			if (search.expressions(element, value)) {
 				return true;
 			}
 		}
 		return false;
 
+	}
+
+	@Override
+	public boolean expressions(String arg1, String arg2) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

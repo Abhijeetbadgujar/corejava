@@ -2,7 +2,7 @@ package com.xworkz.methods.funtionInterface;
 
 public class BeerDAOStater {
 
-	public static <BeerSearch> void main(String[] args) {
+	public static void main(String[] args) {
 
 		
 				BeerDAO beerDAO = new BeerDAO();
