@@ -13,8 +13,8 @@ public class ProductLambdaRunner {
 		boolean match = dao.find((f1,f2)->{
 		if(f1.getName().equals(f2.getName())&& f1.getPrice()==f2.getPrice())
 		{
-			return f1.equals(f2);
-		}return false;
+			return f1;
+		}return ;
 		
 		},dto3 );
 		System.out.println(match);

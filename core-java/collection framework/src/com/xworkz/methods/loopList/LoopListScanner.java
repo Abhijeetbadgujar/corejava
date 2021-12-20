@@ -2,6 +2,7 @@ package com.xworkz.methods.loopList;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class LoopListScanner {
 
@@ -24,7 +25,19 @@ public class LoopListScanner {
 		}
 		System.err.println("--------------------");
 		list.forEach((f)->{System.out.println(f);});
-
+		
+		System.err.println("--------------------");
+		for (int i = 0; i < list.size(); i++) {
+		String ref1=list.get(i);
+		System.out.println(ref1);
+		}
+		
+		System.err.println("--------------------");
+		ListIterator<String> itrref=list.listIterator(list.size());
+		while(itrref.hasPrevious()) {
+			String itr=itrref.previous();
+			System.out.println(itr);
+		}
+		
 	}
-
 }
