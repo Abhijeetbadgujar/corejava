@@ -24,13 +24,14 @@ public class MLADTORunner {
 		System.out.println("--------------------------------------------------");
 		System.out.println("qualification...");
 		Comparator<MLADTO> comparator=(w1,w2)->{
-			int w1id=w1.getId();
-			int w2id=w2.getId();
-			if(w1id==w2id)return 0;
-			if(w1id<w2id)return 1000;
-			if(w1id>w2id)return -100;
-			return 0;
+			String c1=w1.getConstituency();
+			String c2=w2.getConstituency();
+			int value=c2.compareTo(c1);
+			return value;
 		};
+		System.out.println("@@@@@@@@@@@@");
+		list.stream().sorted().forEach((d)->System.out.println(d ));
+		System.out.println("@@@@@@@@@@@@");
 		list.stream().filter(u->u.getName().equals(MLADTOName.ABDULASTTAR)).forEach(t->System.out.println(t));
 		System.out.println("--------------------------------------------------");
 		System.out.println("max totolAssect...");

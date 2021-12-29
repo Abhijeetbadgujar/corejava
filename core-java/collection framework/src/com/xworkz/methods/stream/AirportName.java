@@ -34,7 +34,7 @@ public class AirportName {
 
 		 Stream<String> stream=Stream.of(airport,airport1,airport2,airport3,airport4,airport5,airport6,airport7,airport8,airport9,airport10,
 				 airport11,airport12,airport13,airport14,airport15,airport16,airport17,airport18,airport19);
-		 List<String> list=stream.filter(s-> s.startsWith("S")).collect(Collectors.toList());
+		 List<String> list=stream.filter(q-> q.startsWith("S")).collect(Collectors.toList());
 		 list.forEach(e-> System.out.println(e));
 		 System.err.println("-----------------------------");	
 		 

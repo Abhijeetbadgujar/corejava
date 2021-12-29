@@ -2,7 +2,7 @@ package com.xworkz.methods.operational;
 
 import java.io.Serializable;
 
-public class MLADTO implements Serializable {
+public class MLADTO implements Serializable,Comparable<MLADTO> {
 	private int id;
 	private MLADTOName name;
 	private String constituency;
@@ -50,6 +50,10 @@ public class MLADTO implements Serializable {
 	public String toString() {
 		return "MLADTO [id=" + id + ", name=" + name + ", constituency=" + constituency + ", totalAssect=" + totalAssect
 				+ ", foundedBy=" + foundedBy + "]";
+	}
+	@Override
+	public int compareTo(MLADTO o) {
+		return o.constituency.compareTo(this.getConstituency());
 	}
 	
 	
