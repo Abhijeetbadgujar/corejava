@@ -26,6 +26,7 @@ public class ClubDTO implements Serializable{
 	public int getFees() {
 		return fees;
 	}
+	
 	@Override
 	public String toString() {
 		return "ClubDTO [id=" + id + ", name=" + name + ", noOfBouncers=" + noOfBouncers + ", fees=" + fees + "]";
