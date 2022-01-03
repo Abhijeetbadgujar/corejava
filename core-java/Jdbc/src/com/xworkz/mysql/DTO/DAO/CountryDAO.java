@@ -5,17 +5,19 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import com.mysql.cj.util.Util;
 import com.xworkz.mysql.DTO.CountryDTO;
 import com.xworkz.mysql.DTO.DAO.Interface.ConstanceInterface;
 import com.xworkz.mysql.DTO.DAO.Interface.FestivalInterface;
 
 public class CountryDAO {
 	Connection connection = null;
-
+	Connection shot=null;
 	public boolean save(CountryDTO dto1) {
+		shot=.cr
 		try {
 			// 1.loading and resistation driver
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			
 			// 2.created connection usig drivermaneger
 			connection = DriverManager.getConnection(FestivalInterface.URL, FestivalInterface.USE_NAME,
 					FestivalInterface.PASSWORD);

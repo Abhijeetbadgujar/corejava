@@ -10,7 +10,7 @@ public class MLADTORunner {
 
 	public static void main(String[] args) {
 
-		MLADTO mladto=new MLADTO(1,MLADTOName.ABDULASTTAR,"central aurangabad",20,"rajpal yadav");
+		MLADTO mladto=new MLADTO(1,MLADTOName.ATULSALVE,"central aurangabad",20,"rajpal yadav");
 		MLADTO mladto1=new MLADTO(3,MLADTOName.ATULSALVE,"east aurangabad",15,"pappu");
 		MLADTO mladto2=new MLADTO(2,MLADTOName.JAISWALPRADEEP,"north aurangabad",17,"rahul");
 		MLADTO mladto3=new MLADTO(4,MLADTOName.SANJAYPANDURANG,"south aurangabad",22,"pandya");
