@@ -10,7 +10,7 @@ public class TrainsDTO {
 	private String nameboarding;
 	private String destination;
 	private String trainClass;
-	public TrainsDTO(int tid, int trainNo, int seatNo, int price, String nameboarding, String destination,
+	public TrainsDTO(int tid, int trainNo, int seatNo, int price,String nameboarding, String destination,
 			String trainClass) {
 		super();
 		this.tid = tid;

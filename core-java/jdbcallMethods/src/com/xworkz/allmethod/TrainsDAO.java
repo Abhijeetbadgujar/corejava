@@ -42,7 +42,7 @@ public class TrainsDAO {
 		}
 		return false;
 	}
-	public boolean delete(int tid) {
+/*	public boolean delete(int tid) {
 		try {
 			Class.forName(TrainsInterface.DRIVER);
 			mysql=DBUtil.createConnection();
@@ -116,7 +116,7 @@ public class TrainsDAO {
 		
 		return null;
 	}
-	
+	*/
 
 
 //}
