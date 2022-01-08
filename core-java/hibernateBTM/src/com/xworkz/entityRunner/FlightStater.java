@@ -8,8 +8,16 @@ public class FlightStater {
 
 	public static void main(String[] args) {
 
-		FlightInterface flightEntity=new FlightImplementation();
-		flightEntity.save(new FlightEntity());
+		//FlightInterface flightInterface=new FlightImplementation();
+		//flightInterface.save(entity);
+		FlightEntity entity=new FlightEntity();
+		entity.setF_id(2);
+		entity.setF_name("vistara");
+		entity.setF_source("bangalore");
+		entity.setF_dest("aurangabad");
+		FlightInterface flightInterface=new FlightImplementation();
+		flightInterface.save(entity);
+
 	}
 
 }

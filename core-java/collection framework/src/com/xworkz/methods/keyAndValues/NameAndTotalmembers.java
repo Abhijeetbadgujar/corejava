@@ -16,7 +16,7 @@ public class NameAndTotalmembers {
 		Map<String,Integer> map=new HashMap<String,Integer>();
 		map.put("college",20);
 		map.put("movie",10);
-		map.put("festival",12);
+		map.put("college",12);
 		map.put("trakking",6);
 		
 		System.out.println("read only key...");
