@@ -6,12 +6,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-@Entity
-@Table (name="state_detailss")
+//@ annotation is the powerful way to provide the relational table mapping.
+@Entity  //marks this class as a entity bean. 
+@Table (name="state_detailss")  // it is allowed to the details of the table that is used to the entity in the table
 public class StateEntity implements Serializable{
-	@Id
-	@Column (name="st_id")
+	@Id  //this annotation show to primitive key 
+	@Column (name="st_id")// this annotation show to details of the column.
 	private int id;
 	@Column (name="st_name")
 	private String name;
@@ -19,6 +19,9 @@ public class StateEntity implements Serializable{
 	private int noOfdistract;
 	@Column (name="st_capitalCity")
 	private String capitalCity;
+	public StateEntity() {
+		// TODO Auto-generated constructor stub
+	}
 	public StateEntity(int id, String name, int noOfdistract, String capitalCity) {
 		super();
 		this.id = id;
@@ -65,6 +68,7 @@ public class StateEntity implements Serializable{
 		// TODO Auto-generated method stub
 		return super.equals(obj);
 	}
+	
 	
 
 }

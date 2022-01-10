@@ -19,6 +19,9 @@ public class CountryEntity implements Serializable {
 	private String cty_continent;
 	@Column (name="cty_population")
 	private long cty_population;
+	public CountryEntity() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public CountryEntity(int id, String name, String continent, long population) {
 		super();
@@ -77,6 +80,7 @@ public class CountryEntity implements Serializable {
 		// TODO Auto-generated method stub
 		return super.hashCode();
 	}
+
 	
 }
 

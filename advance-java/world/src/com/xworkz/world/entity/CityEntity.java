@@ -21,6 +21,9 @@ public class CityEntity implements Serializable{
 	private String famousFor;
 	@Column (name="ct_population")
 	private long population;
+	public CityEntity() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	public CityEntity(int id, String name, String coronaZone, String famousFor, long population) {
 		super();

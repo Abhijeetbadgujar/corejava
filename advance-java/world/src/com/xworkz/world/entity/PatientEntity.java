@@ -21,6 +21,9 @@ public class PatientEntity {
 	private int age;
 	@Column (name="p_buNo")
 	private int buNo;
+	public PatientEntity() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public PatientEntity(int id, String name, String birthPlace, String corona, int age, int buNo) {
 		super();
