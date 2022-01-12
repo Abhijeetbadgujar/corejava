@@ -1,4 +1,4 @@
-package com.workz.tourist;
+package com.xworkz.tourist.stater;
 
 import com.xworkz.tourist.dao.MedicineDAO;
 import com.xworkz.tourist.dao.MedicineDAOImpl;

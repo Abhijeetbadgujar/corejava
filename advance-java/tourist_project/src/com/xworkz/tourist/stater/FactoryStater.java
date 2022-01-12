@@ -1,4 +1,4 @@
-package com.workz.tourist;
+package com.xworkz.tourist.stater;
 
 import com.xworkz.tourist.dao.FactoryDAO;
 import com.xworkz.tourist.dao.FactoryDAOImpl;
