@@ -7,13 +7,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
-import org.hibernate.tuple.GeneratedValueGeneration;
 
 @Entity
 @Table(name = "website_detailss")
-
+@NamedQueries ({@NamedQuery(name = "GetByNameflipkart",
+		query = "select web from WebsiteEntity web where web.name='Mit'"),
+				@NamedQuery(name ="getByLikeUrlX",
+		query = "select web from WebsiteEntity web where web.url='www.Mit.com'")})
 public class WebsiteEntity implements Serializable{
 	@Id
 	@GeneratedValue (strategy=GenerationType.IDENTITY)

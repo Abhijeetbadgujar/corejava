@@ -8,8 +8,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceException;
 
-import com.workz.tourist.util.EMFUtil;
 import com.xworkz.tourist.entity.TouristEntity;
+import com.xworkz.tourist.util.EMFUtil;
 
 /*public class TouristDAOImpl implements TouristDAO {
 	public void put(TouristEntity entity) {

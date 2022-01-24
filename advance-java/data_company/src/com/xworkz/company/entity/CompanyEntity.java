@@ -12,6 +12,7 @@ public class CompanyEntity implements Serializable{
 	@Id
 	@Column (name="c_id")
 	private int c_id;
+	
 	@Column (name="c_name")
 	private String c_name;
 	@Column (name="c_type")

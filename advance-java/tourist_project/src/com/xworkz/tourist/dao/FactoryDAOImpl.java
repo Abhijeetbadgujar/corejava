@@ -7,8 +7,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 
 import com.mysql.cj.util.Util;
-import com.workz.tourist.util.EMFUtil;
 import com.xworkz.tourist.entity.FactoryEntity;
+import com.xworkz.tourist.util.EMFUtil;
 
 public class FactoryDAOImpl implements FactoryDAO{
 public void put(FactoryEntity entity) {
