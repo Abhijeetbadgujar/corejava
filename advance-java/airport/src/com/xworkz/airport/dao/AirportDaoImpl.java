@@ -2,6 +2,7 @@ package com.xworkz.airport.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.PersistenceException;
 
 import com.xworkz.airport.entity.AirportEntity;
 import com.xworkz.airport.util.EMFUtil;
@@ -14,8 +15,19 @@ public class AirportDaoImpl implements AirportDAO{
 		EntityManager entityManager=EMFUtil.getEntityManagerFactory().createEntityManager();
 		EntityTransaction transaction=entityManager.getTransaction();
 		transaction.begin();
-		entityManager.persist(entity);
-		transaction.commit();
+		try {
+			entityManager.persist(entity);
+			transaction.commit();
+			
+		} catch (PersistenceException e) {
+			e.getStackTrace();
+		}
+		finally {
+			if(entityManager!=null) {
+				entityManager.close();
+			}
+		}
+		
 		
 	}
 
