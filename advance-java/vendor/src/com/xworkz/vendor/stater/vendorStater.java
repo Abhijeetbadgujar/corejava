@@ -2,11 +2,11 @@ package com.xworkz.vendor.stater;
 
 import java.time.LocalDateTime;
 
-import com.xworkz.register.service.Service;
-import com.xworkz.register.service.ServiceImpl;
 import com.xworkz.vendor.dao.VendorDao;
 import com.xworkz.vendor.dao.VendorDaoImpl;
 import com.xworkz.vendor.entity.VendorEntity;
+import com.xworkz.vendor.service.Service;
+import com.xworkz.vendor.service.ServiceImpl;
 
 public class vendorStater {
 

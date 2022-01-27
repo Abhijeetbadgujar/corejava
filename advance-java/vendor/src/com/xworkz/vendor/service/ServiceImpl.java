@@ -1,4 +1,4 @@
-package com.xworkz.register.service;
+package com.xworkz.vendor.service;
 
 import com.xworkz.vendor.dao.VendorDao;
 import com.xworkz.vendor.entity.VendorEntity;
