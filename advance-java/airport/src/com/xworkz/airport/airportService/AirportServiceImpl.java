@@ -9,7 +9,7 @@ public class AirportServiceImpl implements AirportService {
 	
 
 	private AirportDAO dao;
-	boolean valid = true;
+	//boolean valid = true;
 
 	public AirportServiceImpl(AirportDAO airportDAO) {
 		this.dao = airportDAO;
@@ -18,7 +18,7 @@ public class AirportServiceImpl implements AirportService {
 	@Override
 
 	public boolean validataAndSave(AirportEntity airportEntity) {
-		// try {
+		boolean valid = true;
 		if ((airportEntity.getName() != null || airportEntity.getName().length() >= 3)
 				&& airportEntity.getName().length() <= 300) {
 			valid = true;
