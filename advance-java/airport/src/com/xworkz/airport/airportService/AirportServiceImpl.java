@@ -1,73 +1,172 @@
 package com.xworkz.airport.airportService;
 
+
 import com.xworkz.airport.dao.AirportDAO;
 import com.xworkz.airport.entity.AirportEntity;
 
-import lombok.NonNull;
 
 public class AirportServiceImpl implements AirportService {
-	private AirportEntity[] daos=new AirportEntity[7];
-	private int counter=0;
+	
 
-	public AirportServiceImpl(AirportEntity[] airportEntity) {
-		this.daos = airportEntity;
+	private AirportDAO dao;
+	boolean valid = true;
+
+	public AirportServiceImpl(AirportDAO airportDAO) {
+		this.dao = airportDAO;
 	}
 
 	@Override
-	
-	public AirportEntity validataAndSave(AirportEntity airportEntity) {
-	
-		if((airportEntity.getName()!=null && airportEntity.getName().length()>=4) && airportEntity.getName().length()<=0){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getPassword()!=null && airportEntity.getName().length()>=4) && airportEntity.getPassword().length()<=0){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getLocation()!=null && airportEntity.getName().length()>=4) && airportEntity.getPassword().length()<=0){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getCity()!=null && airportEntity.getName().length()>=4) && airportEntity.getPassword().length()<=0){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getState()!=null && airportEntity.getName().length()>=4) && airportEntity.getState().length()<=0){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getDomastic_flights()!=0 && airportEntity.getName().length()>=4) && airportEntity.getDomastic_flights()<=0){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getInternational_flights()!=0 && airportEntity.getName().length()>=4) && airportEntity.getInternational_flights()<=0){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getCapacity()!=0 && airportEntity.getName().length()>=4) && airportEntity.getCapacity()<=0){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getNo_of_runways()!=0 && airportEntity.getName().length()>=4) && airportEntity.getNo_of_runways()<=0){
-			this.daos[counter]=airportEntity;
-		}
-		if(airportEntity.isRepair_center()!=false ){
-			this.daos[counter]=airportEntity;
-		}
-		if(airportEntity.isInternational_or_not()!=false ){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getNo_of_gates()!=0 && airportEntity.getName().length()>=4) && airportEntity.getNo_of_gates()<=0){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getCreated_By_name()!=null && airportEntity.getName().length()>=4) && airportEntity.getCreated_By_name().length()<=0){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getCreated_By_dateWithSeconds()!=null && airportEntity.getName().length()>=4) ){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getUpdate_By()!=null && airportEntity.getName().length()>=4) && airportEntity.getUpdate_By().length()<=0){
-			this.daos[counter]=airportEntity;
-		}
-		if((airportEntity.getUpdate_AT()!=null && airportEntity.getName().length()>=4) ){
-			this.daos[counter]=airportEntity;
-		}
-		
-		return airportEntity;
-		}
-	
 
+	public boolean validataAndSave(AirportEntity airportEntity) {
+		// try {
+		if ((airportEntity.getName() != null || airportEntity.getName().length() >= 3)
+				&& airportEntity.getName().length() <= 300) {
+			valid = true;
+		} else {
+			System.out.println("Name is invalid");
+			System.out.println(airportEntity.getName().length());
+			valid = false;
+			return valid;
+		}
+
+		if ((airportEntity.getPassword() != null &&  airportEntity.getPassword().length() >= 4)
+				&& airportEntity.getPassword().length() <= 5000) {
+			valid = true;
+		} else {
+			System.out.println("name is invalied");
+			valid = false;
+			return valid;
+		}
+
+		if ((airportEntity.getLocation() != null && airportEntity.getLocation().length() >= 4)
+				&& airportEntity.getPassword().length() <= 500) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if ((airportEntity.getCity() != null && airportEntity.getCity().length() >= 4)
+				&& airportEntity.getPassword().length() <= 500) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if ((airportEntity.getState() != null && airportEntity.getState().length() >= 4)
+				&& airportEntity.getState().length() <= 400) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if ((airportEntity.getDomastic_flights() != 0 && airportEntity.getDomastic_flights() >= 4)
+				&& airportEntity.getDomastic_flights() <= 50000) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if ((airportEntity.getInternational_flights() != 0 && airportEntity.getInternational_flights() >= 4)
+				&& airportEntity.getInternational_flights() <= 600) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if ((airportEntity.getCapacity() != 0 && airportEntity.getCapacity() >= 4)
+				&& airportEntity.getCapacity() <= 5000) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if ((airportEntity.getNo_of_runways() != 0 && airportEntity.getNo_of_runways() >= 2)
+				&& airportEntity.getNo_of_runways() <= 5000) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if (airportEntity.isRepair_center() != false) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if (airportEntity.isInternational_or_not() != false) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if ((airportEntity.getNo_of_gates() != 0 && airportEntity.getNo_of_gates() >= 4)
+				&& airportEntity.getNo_of_gates() <= 500) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if ((airportEntity.getCreated_By_name() != null && airportEntity.getCreated_By_name().length() >= 4)
+				&& airportEntity.getCreated_By_name().length() <= 500) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if ((airportEntity.getCreated_By_dateWithSeconds() != null /*
+																	 * && airportEntity.getCreated_By_dateWithSeconds().
+																	 * length() >= 4)
+																	 */)) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if ((airportEntity.getUpdate_By() != null && airportEntity.getUpdate_By().length() >= 4)
+				&& airportEntity.getUpdate_By().length() <= 500) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}      
+
+		if ((airportEntity.getUpdate_AT() != null/* && airportEntity.getUpdate_AT().length() >= 4) */)) {
+			valid = true;
+		} else {
+			System.out.println("name is invalid");
+			valid = false;
+			return valid;
+		}
+
+		if (valid) {
+			dao.save(airportEntity);
+			
+		}
+		return false;
+	}
 }

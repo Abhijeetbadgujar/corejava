@@ -4,6 +4,6 @@ import com.xworkz.airport.entity.AirportEntity;
 
 public interface AirportService {
 
-	AirportEntity validataAndSave(AirportEntity airportEntity);
+	boolean validataAndSave(AirportEntity airportEntity);
 
 }
