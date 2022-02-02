@@ -21,10 +21,6 @@ import javax.persistence.Table;
 	@NamedQuery(name = "getMaxPrice", query = "select max(product.price) from ProductEntity as product"),
 	@NamedQuery(name = "getTotalPrice", query = "select sum(product.price) from ProductEntity as product"),
 
-
-
-
-
 })
 public class ProductEntity  implements Serializable{
 	@Id

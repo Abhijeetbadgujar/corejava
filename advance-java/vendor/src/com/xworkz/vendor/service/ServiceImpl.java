@@ -13,7 +13,7 @@ public class ServiceImpl implements Service {
 
 	@Override
 	public boolean validataAndSave(VendorEntity vendorEntity) {
-		boolean valid = true;
+		boolean valid = false;
 		System.out.println("invoked valid and save");
 		if ((vendorEntity.getUserName() != null && vendorEntity.getUserName().length() >= 5)
 				&& vendorEntity.getUserName().length() <= 30 && !(vendorEntity.getUserName().isEmpty())) {
@@ -35,7 +35,7 @@ public class ServiceImpl implements Service {
 			return valid;
 		}
 
-		if ((vendorEntity.getLoginName() != null && vendorEntity.getLoginName().length() >= 8)
+		if ((vendorEntity.getLoginName() != null && vendorEntity.getLoginName().length() >= 6)
 				&& vendorEntity.getLoginName().length() <= 12 && !(vendorEntity.getLoginName().isEmpty())) {
 			valid = true;
 		} else {
@@ -54,7 +54,7 @@ public class ServiceImpl implements Service {
 			valid = false;
 			return valid;
 		}
-		
+
 		if (String.valueOf(vendorEntity.getGstNo()).length() == 13 && vendorEntity.getLoginName() != null
 				&& !(vendorEntity.getLoginName().isEmpty())) {
 			valid = true;
@@ -84,14 +84,66 @@ public class ServiceImpl implements Service {
 			return valid;
 		}
 
-
-
 		if (valid) {
 			System.out.println("valid calling dao save");
 			dao.save(vendorEntity);
 
 		}
 		return valid;
+	}
+
+	@Override
+	public boolean validAndLogin(String loginName, String password) {
+		boolean valid = false;
+		System.out.println("invoked valid and login");
+		if (loginName != null && (!loginName.isEmpty()) && (loginName.length() >= 4) && (loginName.length() <= 500)) {
+			valid = true;
+		} else {
+			System.out.println("login is invalid");
+			System.out.println(loginName.length());
+			valid = false;
+			return valid;
+		}
+		if (password != null && (!password.isEmpty()) && (password.length() >= 4) && (password.length() <= 500)) {
+			valid = true;
+		} else {
+			System.out.println("login is invalid");
+			System.out.println(password.length());
+			valid = false;
+			return valid;
+		}
+		if(valid) {
+			valid=dao.findLogin(loginName, password);
+			return valid;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean validAndChangePassword(String email, String newPassword) {
+		boolean valid = false;
+		System.out.println("invoked valid and login");
+		if (email != null && (!email.isEmpty()) && (email.length() >= 4) && (email.length() <= 500)) {
+			valid = true;
+		} else {
+			System.out.println("login is invalid");
+			System.out.println(email.length());
+			valid = false;
+			return valid;
+		}
+		if (newPassword != null && (!newPassword.isEmpty()) && (newPassword.length() >= 4) && (newPassword.length() <= 500)) {
+			valid = true;
+		} else {
+			System.out.println("login is invalid");
+			System.out.println(newPassword.length());
+			valid = false;
+			return valid;
+		}
+		if(valid) {
+			valid=dao.findLogin(email, newPassword);
+			return valid;
+		}
+		return false;
 	}
 
 }

@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -17,6 +19,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "vendor_detailss ")
+@NamedQueries ({ @NamedQuery(name = "findLogin", query = "select vendor.loginName from VendorEntity as vendor"),
+		@NamedQuery(name = "findByEmail", query = "select vendor.email from VendorEntity as vendor"),
+		@NamedQuery(name = "updatePasswordByEmail", query = "select vendor")
+
+})
 public class VendorEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,8 +50,8 @@ public class VendorEntity implements Serializable {
 	@Column(name = "v_updateAt ")
 	private LocalDateTime updatedAt;
 
-	public VendorEntity( String userName, String email, String loginName, String password, String address,
-			String gstNo, String createdBy, LocalDateTime createdAt, String updatedBy, LocalDateTime updatedAt) {
+	public VendorEntity(String userName, String email, String loginName, String password, String address, String gstNo,
+			String createdBy, LocalDateTime createdAt, String updatedBy, LocalDateTime updatedAt) {
 		super();
 		this.userName = userName;
 		this.email = email;
