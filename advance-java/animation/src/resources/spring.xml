@@ -9,4 +9,6 @@
 <bean id="coronaSpring" class="com.xworkz.animation.CoronaSpring"></bean>
 <bean id="ministerSpring" class="com.xworkz.animation.MinisterSpring"></bean>
 
+<bean id="tablet" class="com.xworkz.things.Tablet"></bean>
+
 </beans>

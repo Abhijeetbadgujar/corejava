@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+	<bean id="charger" class="com.xworkz.InitizMethod.Charger">
+	<constructor-arg value="MI"></constructor-arg>
+	<constructor-arg value="34"></constructor-arg>
+	<property name="colour" value="white"></property>
+	<property name="volt" value="420"></property>
+	<property name="workingRNot" value="true"></property>
+	</bean>
+	
+	<bean id="solarWaterHeater" class="com.xworkz.InitizMethod.SolarWaterHeater">
+	<property name="capacity" value="250"></property>
+	<property name="brand" value="lakxmi"></property>
+	<property name="price" value="23000"></property>
+	<property name="coldWater" value="false"></property>
+	</bean>
+	
+	<bean id="toothPaste" class="com.xworkz.InitizMethod.ToothPaste">
+	<constructor-arg value="dabbar"></constructor-arg>
+	<constructor-arg value="55"></constructor-arg>
+	<constructor-arg value="10"></constructor-arg>
+	<property name="ml" value="100.25"></property>
+	<property name="saltRNot" value="true"></property>
+	</bean>
+	
+	<bean id="ups" class="com.xworkz.InitizMethod.Ups">
+	<constructor-arg value="luminous"></constructor-arg>
+	<constructor-arg value="battry"></constructor-arg>
+	<constructor-arg value="45.4"></constructor-arg>
+	<property name="backUpHours" value="12"></property>
+	<property name="chargeHours" value="17.30"></property>
+	</bean>
+	
+	<bean id="cooker" class="com.xworkz.InitizMethod.Cooker">
+	<constructor-arg value="pristage"></constructor-arg>
+	<constructor-arg value="30.4"></constructor-arg>
+	<constructor-arg value="black"></constructor-arg>
+	<property name="liters" value="12"></property>
+	<property name="wireLength" value="33.4"></property>
+	<property name="customer" value="Abhi"></property>
+	</bean>
+	
+
+</beans>
