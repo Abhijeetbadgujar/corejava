@@ -16,12 +16,11 @@ public class AirportRunner {
 				440, 980, 2, true, true, 78, 940, 1000, "Abhijeet", LocalDateTime.now(), "vandana",
 				LocalDateTime.now());
 		// AirportEntity airportEntity1=new AirportEntity( "CSamMT", "567890",
-		// "chikhathana", "aurangabad", "maharahstra",4, 4, 9,1, false, false,3, 9, 9 );
+		// "chikhathana","aurangabad", "maharahstra",4, 4, 9,1, false, false,3, 9, 9 );
 		AirportDAO dao = new AirportDaoImpl();
 
 		AirportService airportService = new AirportServiceImpl(dao);
 		airportService.validataAndSave(airportEntity);
-
 	}
 
 }
