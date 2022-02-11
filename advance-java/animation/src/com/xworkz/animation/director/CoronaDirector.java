@@ -18,3 +18,4 @@ public class CoronaDirector {
 	}
 
 }
+//constructor----setter------init-----destrory

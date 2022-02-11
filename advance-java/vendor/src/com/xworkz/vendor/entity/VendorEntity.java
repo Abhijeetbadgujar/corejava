@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "vendor_detailss ")
 @NamedQueries ({ @NamedQuery(name = "findLogin", query = "select vendor.loginName from VendorEntity as vendor"),
 		@NamedQuery(name = "findByEmail", query = "select vendor.email from VendorEntity as vendor"),
-		@NamedQuery(name = "updatePasswordByEmail", query = "select vendor")
+		//@NamedQuery(name = "updatePasswordByEmail", query = "select vendor")
 
 })
 public class VendorEntity implements Serializable {

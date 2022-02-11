@@ -5,5 +5,7 @@ import com.xworkz.plate.entity.PlateEntity;
 
 public interface PlateDao {
 
-	public void save(PlateEntity entity) ;
+	public void fetchById(int i) ;
+
+	
 }

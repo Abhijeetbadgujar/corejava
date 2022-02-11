@@ -12,24 +12,24 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="plate_detailss")
+@Table(name = "plate_detailss")
 
 public class PlateEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="p_id")
+	@Column(name = "p_id")
 	private int id;
-	@Column(name="p_brand")
+	@Column(name = "p_brand")
 	private String brand;
-	@Column(name="p_color")
+	@Column(name = "p_color")
 	private String color;
-	@Column(name="p_price")
+	@Column(name = "p_price")
 	private int price;
+
 	public PlateEntity(String brand, String color, int price) {
 		super();
 		this.brand = brand;

@@ -13,6 +13,7 @@ public class PlateStater {
 		
 		PlateDao dao=new PlateDaoImpl();
 		//dao.save(plateEntity);
-		dao.save(plateEntity1);
+		dao.fetchById(1);
+		dao.fetchById(2);
 	}
 }
