@@ -6,7 +6,7 @@ public class Laptop {
 	private String store;
 	private String retriving;
 	public Laptop(String retriving) {
-		System.out.println(this.getClass().getSimpleName().concat("invoked the laptop constructor"));
+		//System.out.println(this.getClass().getSimpleName().concat("invoked the laptop constructor"));
 		this.retriving=retriving;
 		System.out.println(retriving);
 	}
